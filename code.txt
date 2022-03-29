@@ -1,0 +1,6 @@
+                    <div class="wrap">
+                        <div class="sticker"></div>
+                        <div class="msg">new!</div>
+                    </div>
+
+                    
