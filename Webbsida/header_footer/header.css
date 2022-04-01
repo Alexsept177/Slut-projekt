@@ -3,20 +3,19 @@
 }
 header {
   transition: 0.5s;
-    margin: 0;
-    padding: 0;
-} 
+  margin: 0;
+  padding: 0;
+  } 
 ul {
-    text-align: center;
-    font-size: 3rem;
-    
-  }
+  text-align: center;
+  font-size: 3rem;   
+}
   ul li {
-    display: inline-block;
-  }
-    li {
+  display: inline-block;
+}
+  li {
     color: var(--color-hader-text);
     font-size: 1em;
     cursor:pointer; 
-    }
+  }
   
