@@ -1,4 +1,17 @@
+:root {
+    --background-color: #020402;
+    --color-text: #C5EFCB;
+    --sidenav-text-color: hsl(163, 11%, 12%);
+    --color-haver-animation: rgb(125, 152, 161);
+}
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    transition: background-color .5s;
 }

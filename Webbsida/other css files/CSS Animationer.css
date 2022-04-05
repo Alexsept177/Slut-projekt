@@ -1,4 +1,200 @@
+:root {
+    --background-color: #020402;
+    --color-text: #C5EFCB;
+    --sidenav-text-color: hsl(163, 11%, 12%);
+    --color-haver-animation: rgb(125, 152, 161);
+}
 * {
     margin: 0;
     padding: 0;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    transition: background-color .5s;
+}
+
+body section {
+    display: grid;
+    grid-template-columns: repeat(2, .5fr);
+}
+
+body section .animationer { 
+    display: grid;
+    grid-template-columns: repeat(2, .5fr);
+    grid-template-rows: repeat(2, .5fr);
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: var(--sidenav-text-color); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    grid-column: 1;
+    grid-row: 1;
+    transition: margin-left .5s;
+    padding: 1.8em 0;
+    border: 3px solid transparent;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  span {
+    font-size:30px;
+    cursor:pointer;
+    color: var(--color-hader-text);
+  }
+
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  h1::before {
+    content: " ";
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: var(--color-haver-animation);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  h1 {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    font-size: 3rem;  
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    display: grid;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+    color:var(--color-text);
+  }
+
+  button {
+    animation: wiggle 2s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  button {
+    grid-column: 1;
+    grid-row: 2;
+    height: 4em;
+    width: 7em;
+    border: none;
+    border-top: 3px solid orange;
+    border-radius: 0 0 0.2em 0.2em;
+    color: var(--sidenav-text-color); 
+    font-family: Helvetica, Arial, Sans-serif;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+  }
+
+  @keyframes cresent {
+    0% {
+      transform: translate(-30px, 30px) scale(0.9);
+      box-shadow: none;
+    }
+    50% {
+      transform: translate(0px, 0px) scale(1.02);
+      box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #c7938b;
+      background-color: #efdbd8;
+    }
+    100% {
+      transform: translate(30px, -30px) scale(0.9);
+      box-shadow: none;
+    }
+  }
+  .moon {
+    grid-column: 2;
+    grid-row: 2;
+    background-image: linear-gradient(30deg, #13223f, #0e1a30);
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .moon::before {
+    content: "";
+    background-color: #c7938b;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    animation: 3.2s cresent linear infinite alternate;
+  }
+  
+  @media (max-width: 768px) {
+    .moon {
+      width: 160px;
+      height: 160px;
+    }
+  }
