@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Webbsida/header_footer/header.css">
     <link rel="stylesheet" href="/Webbsida/header_footer/footer.css">
     <link rel="stylesheet" href="CodeEX4.css">
+    <script src="/Webbsida/javascript/nav.js" defer></script>
     <title>CodeEX4</title>
 </head>
 <body>
@@ -14,10 +15,24 @@
         <nav>
             <ul>
                 <li>
+                    <li>
+                        <div id="mySidenav" class="sidenav">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a href="../CodeEX1/CodeEX1.html">CodeEX1</a>
+                            <a href="../CodeEX2/CodeEX2.html">CodeEX2</a>
+                            <a href="../CodeEX3/CodeEX3.html">CodeEX3</a>
+                            <a href="../CodeEX4/CodeEX4.html">CodeEX4</a>
+                        </div> 
+                        <div id="main"> 
+                            <span onclick="openNav()">&#9776; open</span>
+                        </div>
+                    </li>
+                </li>
+                <li>
                     <a href="../index.html">CodeBox</a>
                 </li>
                 <li>
-                    <a href="../CSS Animaioner.html">CSS Animationer</a>
+                    <a href="../Animaioner.html">CSS Animationer</a>
                 </li>
                 <li>
                     <a href="../CodeEXEC.html">CodeEXEC</a>
