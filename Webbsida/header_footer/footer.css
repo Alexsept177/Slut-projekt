@@ -16,7 +16,7 @@ img {
     grid-column: 1;
 }
 
-span {
+#tag {
     grid-column: 2;   
     position: relative;
     font-size: 3rem;  
@@ -28,17 +28,17 @@ span {
     color:var(--color-text);
 }
 
-span::before {  
+#tag::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
   }
 
-span:hover::before {
+#tag:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
 
-span::before {
+#tag::before {
     content: " ";
     position: absolute;
     inset: 0 0 0 0;

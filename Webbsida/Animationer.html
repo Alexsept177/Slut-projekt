@@ -62,14 +62,55 @@
                    <div class="element"></div>
                 </figure>
             </div>
-            <div>
-                    -
+            <div class="uppdelning">
+                <div class="nav">
+                    <span onclick="exec1">CodeEX1</span>
+                    <span onclick="exec2">CodeEX2</span>
+                    <span onclick="exec3">CodeEX3</span>
+                    <span onclick="exec4">CodeEX4</span>
+                </div>
+                <div class="del">
+                    <pre>
+                        <code>
+                            <span>
+                                h1 {
+                                    position: relative;
+                                    font-size: 3rem;  
+                                    min-block-size: 100%;
+                                    min-inline-size: 100%;
+                                    display: grid;
+                                    place-content: center;
+                                    font-family: system-ui, sans-serif;
+                                    color:var(--color-text);
+                                  }
+                                h1::before {  
+                                    transform: scaleX(0);
+                                    transform-origin: bottom right;
+                                  }
+                                  h1:hover::before {
+                                    transform: scaleX(1);
+                                    transform-origin: bottom left;
+                                  }
+                                  h1::before {
+                                    content: " ";
+                                    position: absolute;
+                                    inset: 0 0 0 0;
+                                    background-color: var(--color-haver-animation);
+                                    z-index: -1;
+                                    transition: transform .3s ease;
+                                  }
+                            </span>
+                        </code>
+                    </pre>
+                </div>
             </div>
         </section>
     </Main>
+    <br>
+    <br>
     <footer>
         <img src="nedladdning (1).jpg" alt="Teknikum">
-        <span>Thank you</span>
+        <span id="tag">Thank you</span>
         <a href="https://www.vaxjo.se/sidor/forskola-och-skola/gymnasieskola/teknikum.html">Visit Teknikum</a>
     </footer>
 </body>

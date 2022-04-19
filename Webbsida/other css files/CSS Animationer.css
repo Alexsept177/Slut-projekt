@@ -18,7 +18,7 @@ body {
 
 body section {
     display: grid;
-    grid-template-columns: repeat(2, .5fr);
+    grid-template-columns: repeat(2, 1fr);
 
 }
 
@@ -142,8 +142,9 @@ h1::before {
     border-radius: 50%;
     position: relative;
   }
+
   .moon::before {
-    content: "";
+    content: ""; 
     background-color: #c7938b;
     position: absolute;
     display: block;
@@ -170,7 +171,7 @@ h1::before {
     animation-name: stretch;
     animation-duration: 1.5s; 
     animation-timing-function: ease-out; 
-    animation-delay: 0;
+    animation-delay: 0; 
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-fill-mode: none;
@@ -191,3 +192,22 @@ h1::before {
       background-color: yellow;
     }
   }
+
+
+section pre code span {
+  font-size: 100%;
+}
+
+.uppdelning {
+  display: grid;
+  grid-template-areas:
+  " t1 t2 "
+}
+
+.nav {
+  grid-area: t1;
+}
+
+.del {
+grid-area: t2;
+}
