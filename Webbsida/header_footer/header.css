@@ -73,8 +73,7 @@ ul {
   .sidenav a {font-size: 18px;}
 }
 
-span {
-  font-size:30px;
+.button {
   cursor:pointer;
   color: var(--color-hader-text);
 }

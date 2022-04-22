@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/Webbsida/header_footer/footer.css">
     <link rel="stylesheet" href="/Webbsida/other css files/CSS Animationer.css">
     <script src="/Webbsida/javascript/nav.js" defer></script>
+    <script src="/Webbsida/javascript/choice.js" defer></script>
     <title>CSS Animationer</title>
 
 </head>
@@ -25,7 +26,7 @@
                             <a href="CodeEX4/CodeEX4.html">CodeEX4</a>
                         </div> 
                         <div id="main"> 
-                            <span onclick="openNav()">&#9776; open</span>
+                            <span onclick="openNav()" class="button">&#9776; open</span>
                         </div>
                     </li>
                 </li>
@@ -64,44 +65,160 @@
             </div>
             <div class="uppdelning">
                 <div class="nav">
-                    <span onclick="exec1">CodeEX1</span>
-                    <span onclick="exec2">CodeEX2</span>
-                    <span onclick="exec3">CodeEX3</span>
-                    <span onclick="exec4">CodeEX4</span>
+                    <span onclick="showCode1()" class="ex1">CodeEX1</span>
+                    <span onclick="showCode2()" class="ex2">CodeEX2</span>
+                    <span onclick="showCode3()" class="ex3">CodeEX3</span>
+                    <span onclick="showCode4()" class="ex4">CodeEX4</span>
                 </div>
-                <div class="del">
-                    <pre>
-                        <code>
-                            <span>
-                                h1 {
-                                    position: relative;
-                                    font-size: 3rem;  
-                                    min-block-size: 100%;
-                                    min-inline-size: 100%;
-                                    display: grid;
-                                    place-content: center;
-                                    font-family: system-ui, sans-serif;
-                                    color:var(--color-text);
-                                  }
-                                h1::before {  
-                                    transform: scaleX(0);
-                                    transform-origin: bottom right;
-                                  }
-                                  h1:hover::before {
-                                    transform: scaleX(1);
-                                    transform-origin: bottom left;
-                                  }
-                                  h1::before {
-                                    content: " ";
-                                    position: absolute;
-                                    inset: 0 0 0 0;
-                                    background-color: var(--color-haver-animation);
-                                    z-index: -1;
-                                    transition: transform .3s ease;
-                                  }
-                            </span>
-                        </code>
-                    </pre>
+                <div class="del show-code">
+                    <form action="">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
+                                        h1 {
+                                            position: relative;
+                                            font-size: 3rem;  
+                                            min-block-size: 100%;
+                                            min-inline-size: 100%;
+                                            display: grid;
+                                            place-content: center;
+                                            font-family: system-ui, sans-serif;
+                                            color:var(--color-text);
+                                          }
+                                        h1::before {  
+                                            transform: scaleX(0);
+                                            transform-origin: bottom right;
+                                          }
+                                          h1:hover::before {
+                                            transform: scaleX(1);
+                                            transform-origin: bottom left;
+                                          }
+                                          h1::before {
+                                            content: " ";
+                                            position: absolute;
+                                            inset: 0 0 0 0;
+                                            background-color: var(--color-haver-animation);
+                                            z-index: -1;
+                                            transition: transform .3s ease;
+                                          }
+                        </textarea>
+                    </form>
+                </div>
+                <div class="del show-code">
+                    <form action="">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
+                            button {
+                                animation: wiggle 2s linear infinite;
+                              }
+                              
+                              /* Keyframes */
+                              @keyframes wiggle {
+                                0%, 7% {
+                                  transform: rotateZ(0);
+                                }
+                                15% {
+                                  transform: rotateZ(-15deg);
+                                }
+                                20% {
+                                  transform: rotateZ(10deg);
+                                }
+                                25% {
+                                  transform: rotateZ(-10deg);
+                                }
+                                30% {
+                                  transform: rotateZ(6deg);
+                                }
+                                35% {
+                                  transform: rotateZ(-4deg);
+                                }
+                                40%, 100% {
+                                  transform: rotateZ(0);
+                                }
+                              }
+                            
+                              figure:nth-child(2) {
+                                grid-column: 2;
+                                grid-row: 1;
+                              }
+                              button {
+                                height: 4em;
+                                width: 7em;
+                                border: none;
+                                border-top: 3px solid orange;
+                                border-radius: 0 0 0.2em 0.2em;
+                                color: var(--sidenav-text-color); 
+                                font-family: Helvetica, Arial, Sans-serif;
+                                font-size: 1em;
+                                transform-origin: 50% 5em;
+                              }
+                        </textarea>
+                    </form>
+                </div>
+                <div class="del show-code">
+                    <form action="">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
+                            .moon {
+                                background-image: linear-gradient(30deg, #13223f, #0e1a30);
+                                width: 148px;
+                                height: 148px;
+                                border-radius: 50%;
+                                position: relative;
+                              }
+                            
+                              .moon::before {
+                                content: ""; 
+                                background-color: #c7938b;
+                                position: absolute;
+                                display: block;
+                                height: 100%;
+                                width: 100%;
+                                border-radius: 50%;
+                                z-index: -1;
+                                animation: 3.2s cresent linear infinite alternate;
+                              }
+                              
+                              @media (max-width: 768px) {
+                                .moon {
+                                  width: 160px;
+                                  height: 160px;
+                                }
+                              }
+                        </textarea>
+                    </form>
+                </div>
+                <div class="del show-code">
+                    <form action="">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">
+                            .element {
+                                grid-column: 2;
+                                grid-row: 2;
+                                height: 100px;
+                                width: 100px;
+                                background-color: red;
+                                animation-name: stretch;
+                                animation-duration: 1.5s; 
+                                animation-timing-function: ease-out; 
+                                animation-delay: 0; 
+                                animation-direction: alternate;
+                                animation-iteration-count: infinite;
+                                animation-fill-mode: none;
+                                animation-play-state: running;
+                              }
+                              
+                              @keyframes stretch {
+                                0% {
+                                  transform: scale(.3);
+                                  background-color: red;
+                                  border-radius: 75%;
+                                }
+                                50% {
+                                  background-color: orange;
+                                }
+                                100% {
+                                  transform: scale(1.5);
+                                  background-color: yellow;
+                                }
+                              }
+                        </textarea>
+                    </form>
                 </div>
             </div>
         </section>
