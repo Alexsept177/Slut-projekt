@@ -220,3 +220,16 @@ color: var(--color-text);
 .show-code{
   display: block;
 }
+
+#subject {
+  width: 800px;
+  height: 280px;
+}
+ 
+textarea {
+  background-color: var(--background-color);
+  color: var(--color-text)
+}
+
+
+

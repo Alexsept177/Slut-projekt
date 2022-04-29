@@ -9,7 +9,9 @@ footer {
     display: grid;
     justify-items: center;
     align-items: center;
-    transform: .5s;
+    transition: 0.5s;
+    margin: 0;
+    padding: 0;
 }
 
 img {

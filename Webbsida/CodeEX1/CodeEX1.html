@@ -32,7 +32,7 @@
                     <a href="../index.html">CodeBox</a>
                 </li>
                 <li>
-                    <a href="../Animaioner.html">CSS Animationer</a>
+                    <a href="../Animationer.html">CSS Animationer</a>
                 </li>
                 <li>
                     <a href="../CodeEXEC.html">CodeEXEC</a>
@@ -42,7 +42,39 @@
     </header>
     <Main>
         <section>
-
+            <div>
+                <h1>Hover Me</h1>
+            </div>
+            <div>
+                <textarea id="subject" name="subject" placeholder="">
+                    h1 {
+                        position: relative;
+                        font-size: 3rem;  
+                        min-block-size: 100%;
+                        min-inline-size: 100%;
+                        display: grid;
+                        place-content: center;
+                        font-family: system-ui, sans-serif;
+                        color:var(--color-text);
+                      }
+                    h1::before {  
+                        transform: scaleX(0);
+                        transform-origin: bottom right;
+                      }
+                      h1:hover::before {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                      }
+                      h1::before {
+                        content: " ";
+                        position: absolute;
+                        inset: 0 0 0 0;
+                        background-color: var(--color-haver-animation);
+                        z-index: -1;
+                        transition: transform .3s ease;
+                      }
+    </textarea>
+            </div>
         </section>
     </Main>
     <footer>

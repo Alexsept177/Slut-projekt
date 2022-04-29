@@ -32,7 +32,7 @@
                     <a href="../index.html">CodeBox</a>
                 </li>
                 <li>
-                    <a href="../Animaioner.html">CSS Animationer</a>
+                    <a href="../Animationer.html">CSS Animationer</a>
                 </li>
                 <li>
                     <a href="../CodeEXEC.html">CodeEXEC</a>
@@ -42,7 +42,41 @@
     </header>
     <Main>
         <section>
-
+            <div>
+                <div class="element"></div> 
+            </div>
+            <div>
+                <textarea id="subject" name="subject" placeholder="">
+                    .element {
+                        grid-column: 2;
+                        grid-row: 2;
+                        height: 100px;
+                        width: 100px;
+                        background-color: red;
+                        animation-name: stretch;
+                        animation-duration: 1.5s; 
+                        animation-timing-function: ease-out; 
+                        animation-delay: 0; 
+                        animation-direction: alternate;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: none;
+                        animation-play-state: running;
+                      }
+                      @keyframes stretch {
+                        0% {
+                          transform: scale(.3);
+                          background-color: red;
+                          border-radius: 75%;
+                        }
+                        50% {
+                          background-color: orange;
+                        }
+                        100% {
+                          transform: scale(1.5);
+                          background-color: yellow;
+                        }
+                      }
+    </textarea>
         </section>
     </Main>
     <footer>

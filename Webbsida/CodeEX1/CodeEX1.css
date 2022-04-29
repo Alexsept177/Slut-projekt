@@ -16,3 +16,49 @@ body {
     transition: background-color .5s;
 }
 
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+h1 {
+    grid-column: 1;
+    position: relative;
+    font-size: 3rem;  
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    display: grid;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+    color:var(--color-text);
+  }
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  h1::before {
+    content: " ";
+    position: absolute;
+    inset: 0 0 0 0;
+    background-color: var(--color-haver-animation);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+
+
+#subject {
+    grid-column: 2;
+    width: 800px;
+    height: 280px;
+  }
+   
+  textarea {
+    background-color: var(--background-color);
+    color: var(--color-text)
+  } 

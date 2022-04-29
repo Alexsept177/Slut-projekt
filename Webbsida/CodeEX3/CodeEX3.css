@@ -16,3 +16,61 @@ body {
     transition: background-color .5s;
 }
 
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+@keyframes cresent {
+    0% {
+      transform: translate(-30px, 30px) scale(0.9);
+      box-shadow: none;
+    }
+    50% {
+      transform: translate(0px, 0px) scale(1.02);
+      box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #c7938b;
+      background-color: #efdbd8;
+    }
+    100% {
+      transform: translate(30px, -30px) scale(0.9);
+      box-shadow: none;
+    }
+  }
+  .moon {
+    background-image: linear-gradient(30deg, #13223f, #0e1a30);
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .moon::before {
+    grid-column: 1;
+    content: ""; 
+    background-color: #c7938b;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    animation: 3.2s cresent linear infinite alternate;
+  }
+  @media (max-width: 768px) {
+    .moon {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  #subject {
+    grid-column: 2;
+    width: 800px;
+    height: 280px;
+  }
+   
+  textarea {
+    background-color: var(--background-color);
+    color: var(--color-text)
+  } 
