@@ -29,3 +29,7 @@ function  showCode4(){
     none[2].classList.remove("show-code")
     none[3].classList.add("show-code")
 }
+
+function showEX1(){
+    none[0].classList.add("show-code")
+}

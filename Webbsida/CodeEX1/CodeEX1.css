@@ -62,3 +62,8 @@ h1::before {
     background-color: var(--background-color);
     color: var(--color-text)
   } 
+
+  .del {
+    display: none;
+    color: var(--color-text);
+    }
