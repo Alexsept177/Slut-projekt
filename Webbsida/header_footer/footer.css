@@ -55,3 +55,10 @@ a {
     color: var(--color-text); 
     text-decoration: transparent;
     }   
+
+    @media screen and (max-width: 880px) {
+      footer {
+        display: flex;
+        flex-direction: column;
+      }
+    }

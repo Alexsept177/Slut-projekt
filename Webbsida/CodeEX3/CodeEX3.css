@@ -57,12 +57,7 @@ section {
     z-index: -1;
     animation: 3.2s cresent linear infinite alternate;
   }
-  @media (max-width: 768px) {
-    .moon {
-      width: 160px;
-      height: 160px;
-    }
-  }
+  
 
   #subject {
     grid-column: 2;

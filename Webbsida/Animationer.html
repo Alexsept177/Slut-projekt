@@ -6,226 +6,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="/Webbsida/header_footer/header.css">
     <link rel="stylesheet" href="/Webbsida/header_footer/footer.css">
-    <link rel="stylesheet" href="/Webbsida/other css files/CSS Animationer.css">
+    <link rel="stylesheet" href="other_css_files/Animationer.css">
     <script src="/Webbsida/javascript/nav.js" defer></script>
     <script src="/Webbsida/javascript/choice.js" defer></script>
     <title>CSS Animationer</title>
 
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <li>
-                        <div id="mySidenav" class="sidenav">
-                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <a href="CodeEX1/CodeEX1.html">CodeEX1</a>
-                            <a href="CodeEX2/CodeEX2.html">CodeEX2</a>
-                            <a href="CodeEX3/CodeEX3.html">CodeEX3</a>
-                            <a href="CodeEX4/CodeEX4.html">CodeEX4</a>
-                        </div> 
-                        <div id="main"> 
-                            <span onclick="openNav()" class="button">&#9776; open</span>
-                        </div>
-                    </li>
-                </li>
-                <li>
-                    <a href="../Webbsida/index.html">CodeBox</a>
-                </li>
-                <li>
-                    <a href="../Webbsida/Animationer.html">CSS Animationer</a>
-                </li>
-                <li>
-                    <a href="../Webbsida/CodeEXEC.html">CodeEXEC</a>
-                </li>
-              </ul>
-        </nav>
-    </header>
-    <Main>
-        <section>
-            <div class="animationer">
-                <figure>
-                    <figcaption>CodeEX1</figcaption>
-                    <h1>Hover Me</h1>
-                </figure>
-                <figure>
-                    <figcaption>CodeEX2</figcaption>
-                    <button>Save</button>
-                </figure>
-                <figure>
-                    <figcaption>CodeEX3</figcaption>
-                    <div class="moon"></div>
-                </figure>
-                
-               <figure>
-                <figcaption>CodeEX4</figcaption>
-                   <div class="element"></div>
-                </figure>
-            </div>
-            <div class="uppdelning">
-                <div class="nav">
-                    <span onclick="showCode1()" class="ex1">CodeEX1</span>
-                    <span onclick="showCode2()" class="ex2">CodeEX2</span>
-                    <span onclick="showCode3()" class="ex3">CodeEX3</span>
-                    <span onclick="showCode4()" class="ex4">CodeEX4</span>
+  <header>
+    <nav>
+        <ul>
+             <li>
+                <div id="mySidenav" class="sidenav">
+                    <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a  href="CodeEX1/CodeEX1.html">CodeEX1</a>
+                    <a  href="CodeEX2/CodeEX2.html">CodeEX2</a>
+                    <a  href="CodeEX3/CodeEX3.html">CodeEX3</a>
+                    <a  href="CodeEX4/CodeEX4.html">CodeEX4</a>
+                </div> 
+                <div id="main"> 
+                    <span onclick="openNav()" class="button">&#9776; open</span>
                 </div>
-                <div class="del show-code">
-                        <textarea id="subject" name="subject" placeholder="">
-                                        h1 {
-                                            position: relative;
-                                            font-size: 3rem;  
-                                            min-block-size: 100%;
-                                            min-inline-size: 100%;
-                                            display: grid;
-                                            place-content: center;
-                                            font-family: system-ui, sans-serif;
-                                            color:var(--color-text);
-                                          }
-                                        h1::before {  
-                                            transform: scaleX(0);
-                                            transform-origin: bottom right;
-                                          }
-                                          h1:hover::before {
-                                            transform: scaleX(1);
-                                            transform-origin: bottom left;
-                                          }
-                                          h1::before {
-                                            content: " ";
-                                            position: absolute;
-                                            inset: 0 0 0 0;
-                                            background-color: var(--color-haver-animation);
-                                            z-index: -1;
-                                            transition: transform .3s ease;
-                                          }
-                        </textarea>
-                </div>
-                <div class="del">
-                        <textarea id="subject" name="subject" placeholder="">
-                            button {
-                                animation: wiggle 2s linear infinite;
-                              }
-                              /* Keyframes */
-                              @keyframes wiggle {
-                                0%, 7% {
-                                  transform: rotateZ(0);
-                                }
-                                15% {
-                                  transform: rotateZ(-15deg);
-                                }
-                                20% {
-                                  transform: rotateZ(10deg);
-                                }
-                                25% {
-                                  transform: rotateZ(-10deg);
-                                }
-                                30% {
-                                  transform: rotateZ(6deg);
-                                }
-                                35% {
-                                  transform: rotateZ(-4deg);
-                                }
-                                40%, 100% {
-                                  transform: rotateZ(0);
-                                }
-                              button {
-                                height: 4em;
-                                width: 7em;
-                                border: none;
-                                border-top: 3px solid orange;
-                                border-radius: 0 0 0.2em 0.2em;
-                                color: var(--sidenav-text-color); 
-                                font-family: Helvetica, Arial, Sans-serif;
-                                font-size: 1em;
-                                transform-origin: 50% 5em;
-                              }
-                        </textarea>
-                </div>
-                <div class="del">
-                        <textarea id="subject" name="subject" placeholder="">
-                          @keyframes cresent {
-                            0% {
-                              transform: translate(-30px, 30px) scale(0.9);
-                              box-shadow: none;
-                            }
-                            50% {
-                              transform: translate(0px, 0px) scale(1.02);
-                              box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #c7938b;
-                              background-color: #efdbd8;
-                            }
-                            100% {
-                              transform: translate(30px, -30px) scale(0.9);
-                              box-shadow: none;
-                            }
-                          }
-                          .moon {
-                            background-image: linear-gradient(30deg, #13223f, #0e1a30);
-                            width: 148px;
-                            height: 148px;
-                            border-radius: 50%;
-                            position: relative;
-                          }
-                          .moon::before {
-                            content: ""; 
-                            background-color: #c7938b;
-                            position: absolute;
-                            display: block;
-                            height: 100%;
-                            width: 100%;
-                            border-radius: 50%;
-                            z-index: -1;
-                            animation: 3.2s cresent linear infinite alternate;
-                          }
-                          @media (max-width: 768px) {
-                            .moon {
-                              width: 160px;
-                              height: 160px;
-                            }
-                          }
-                        </textarea>
-                </div>
-                <div class="del ">
-                        <textarea id="subject" name="subject" placeholder="">
-                            .element {
-                                grid-column: 2;
-                                grid-row: 2;
-                                height: 100px;
-                                width: 100px;
-                                background-color: red;
-                                animation-name: stretch;
-                                animation-duration: 1.5s; 
-                                animation-timing-function: ease-out; 
-                                animation-delay: 0; 
-                                animation-direction: alternate;
-                                animation-iteration-count: infinite;
-                                animation-fill-mode: none;
-                                animation-play-state: running;
-                              }
-                              @keyframes stretch {
-                                0% {
-                                  transform: scale(.3);
-                                  background-color: red;
-                                  border-radius: 75%;
-                                }
-                                50% {
-                                  background-color: orange;
-                                }
-                                100% {
-                                  transform: scale(1.5);
-                                  background-color: yellow;
-                                }
-                              }
-                        </textarea>
-                </div>
-            </div>
-        </section>
-    </Main>
+            </li>
+            <li>
+                <a href="../Webbsida/index.html">CodeBox</a>
+            </li>
+            <li>
+                <a href="../Webbsida/Animationer.html">CSS Animationer</a>
+            </li>
+            <li>
+                <a href="../Webbsida/CodeEXEC.html">CodeEXEC</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+  <Main>
+    <section>
+      <div class="animationer">
+        <figure>
+          <figcaption>CodeEX1</figcaption>
+          <h1>Hover Me</h1>
+        </figure>
+        <figure>
+          <figcaption>CodeEX2</figcaption>
+          <button>Save</button>
+        </figure>
+        <figure>
+          <figcaption>CodeEX3</figcaption>
+          <div class="moon"></div>
+        </figure>
+        <figure>
+          <figcaption>CodeEX4</figcaption>
+          <div class="element"></div>
+        </figure>
+      </div>
+      <div class="uppdelning">
+        <div class="nav">
+          <span onclick="showCode1()" class="ex1">CodeEX1</span>
+          <span onclick="showCode2()" class="ex2">CodeEX2</span>
+          <span onclick="showCode3()" class="ex3">CodeEX3</span>
+          <span onclick="showCode4()" class="ex4">CodeEX4</span>
+        </div>
+        <div class="del show-code">
+          <textarea class="subject" name="subject" placeholder="">
+            h1 {
+              position: relative;
+              font-size: 3rem;  
+              min-block-size: 100%;
+              min-inline-size: 100%;
+              display: grid;
+              place-content: center;
+              font-family: system-ui, sans-serif;
+              color:var(--color-text);
+            }
+          h1::before {  
+              transform: scaleX(0);
+              transform-origin: bottom right;
+            }
+            h1:hover::before {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+            h1::before {
+              content: " ";
+              position: absolute;
+              inset: 0 0 0 0;
+              background-color: var(--color-haver-animation);
+              z-index: -1;
+              transition: transform .3s ease;
+            }
+          </textarea>
+        </div>
+        <div class="del">
+          <textarea class="subject">
+            button {
+              animation: wiggle 2s linear infinite;
+            }
+            /* Keyframes */
+            @keyframes wiggle {
+              0%, 7% {
+                transform: rotateZ(0);
+              }
+              15% {
+                transform: rotateZ(-15deg);
+              }
+              20% {
+                transform: rotateZ(10deg);
+              }
+              25% {
+                transform: rotateZ(-10deg);
+              }
+              30% {
+                transform: rotateZ(6deg);
+              }
+              35% {
+                transform: rotateZ(-4deg);
+              }
+              40%, 100% {
+                transform: rotateZ(0);
+              }
+            button {
+              height: 4em;
+              width: 7em;
+              border: none;
+              border-top: 3px solid orange;
+              border-radius: 0 0 0.2em 0.2em;
+              color: var(--sidenav-text-color); 
+              font-family: Helvetica, Arial, Sans-serif;
+              font-size: 1em;
+              transform-origin: 50% 5em;
+            }                      
+          </textarea>
+        </div>
+        <div class="del">
+          <textarea class="subject">
+            @keyframes cresent {
+              0% {
+                transform: translate(-30px, 30px) scale(0.9);
+                box-shadow: none;
+              }
+              50% {
+                transform: translate(0px, 0px) scale(1.02);
+                box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #c7938b;
+                background-color: #efdbd8;
+              }
+              100% {
+                transform: translate(30px, -30px) scale(0.9);
+                box-shadow: none;
+              }
+            }
+            .moon {
+              background-image: linear-gradient(30deg, #13223f, #0e1a30);
+              width: 148px;
+              height: 148px;
+              border-radius: 50%;
+              position: relative;
+            }
+            .moon::before {
+              content: ""; 
+              background-color: #c7938b;
+              position: absolute;
+              display: block;
+              height: 100%;
+              width: 100%;
+              border-radius: 50%;
+              z-index: -1;
+              animation: 3.2s cresent linear infinite alternate;
+            }
+            @media (max-width: 768px) {
+              .moon {
+                width: 160px;
+                height: 160px;
+              }
+            }                  
+          </textarea>
+        </div>
+        <div class="del ">
+          <textarea class="subject">
+            .element {
+              grid-column: 2;
+              grid-row: 2;
+              height: 100px;
+              width: 100px;
+              background-color: red;
+              animation-name: stretch;
+              animation-duration: 1.5s; 
+              animation-timing-function: ease-out; 
+              animation-delay: 0; 
+              animation-direction: alternate;
+              animation-iteration-count: infinite;
+              animation-fill-mode: none;
+              animation-play-state: running;
+            }
+            @keyframes stretch {
+              0% {
+                transform: scale(.3);
+                background-color: red;
+                border-radius: 75%;
+              }
+              50% {
+                background-color: orange;
+              }
+              100% {
+                transform: scale(1.5);
+                background-color: yellow;
+              }
+            }                  
+          </textarea>
+        </div>
+      </div>
+    </section>
+  </Main>
     <br>
     <br>
-    <footer>
-        <img src="nedladdning (1).jpg" alt="Teknikum">
-        <span id="tag">Thank you</span>
-        <a href="https://www.vaxjo.se/sidor/forskola-och-skola/gymnasieskola/teknikum.html">Visit Teknikum</a>
-    </footer>
+  <footer>
+    <img src="nedladdning(1).jpg" alt="Teknikum">
+    <span id="tag">Thank you</span>
+    <a href="https://www.vaxjo.se/sidor/forskola-och-skola/gymnasieskola/teknikum.html">Visit Teknikum</a>
+  </footer>
 </body>
 </html>
