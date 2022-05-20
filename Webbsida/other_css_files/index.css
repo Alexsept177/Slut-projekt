@@ -4,6 +4,8 @@
     --color-text: #C5EFCB;
     --sidenav-text-color: hsl(163, 11%, 12%);
     --color-haver-animation: rgb(125, 152, 161);
+    --color--button-animation:rgba(255, 55, 0, 1);
+    --color--moon--animation:hsla(220, 54%, 16%, 1);
 }
 
 body {
@@ -67,7 +69,7 @@ button {
   height: 4em;
   width: 7em;
   border: none;
-  border-top: 3px solid orange;
+  border-top: 3px solid var(--color--button-animation);
   border-radius: 0 0 0.2em 0.2em;
   color: var(--sidenav-text-color); 
   font-family: Helvetica, Arial, Sans-serif;
@@ -96,7 +98,7 @@ h1 {
   display: grid;
   position: relative;
   text-align: center;
-  font-size: 3rem;  
+  font-size: 6ex;  
   min-block-size: 100%;
   min-inline-size: 100%;
   place-content: center;
@@ -141,7 +143,7 @@ h1 {
   grid-column: 1;
   grid-row: 3;  
   position: relative;
-  background-image: linear-gradient(30deg, #13223f, #0e1a30);
+  background-image: linear-gradient(30deg, var(--color--moon--animation), #0e1a30);
   width: 148px;
   height: 148px;
   border-radius: 50%;
@@ -160,8 +162,8 @@ h1 {
 
 @media screen and (max-width: 1320px) {
   main section   {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1ex);
+    grid-template-rows: repeat(3, 1ex);
     margin-top: 5vw;
     margin-bottom: 5vw;
     transition: 0.5s;

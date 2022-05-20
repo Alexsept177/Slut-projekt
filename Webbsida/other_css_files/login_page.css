@@ -94,7 +94,6 @@ iframe {
     position: fixed;
     top:0;
     right: 0;
-    width: 25em; 
-    height: 25em;
-
+    width: calc(100em - 75em);   
+    height: calc(100% - 75%);   
 }
