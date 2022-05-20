@@ -1,4 +1,8 @@
+
+/*  jag får en specifik font text */
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* man använder den att kunna ändra färg snabbare om någont går fel */
 :root {
     --background-color: #020402;
     --color-text: #C5EFCB;
@@ -8,6 +12,7 @@
     --color--moon--animation:hsla(220, 54%, 16%, 1);
 }
 
+/*  */ 
 body {
     margin: 0;
     padding: 0;
@@ -15,6 +20,7 @@ body {
     transition: background-color .5s;
 }
 
+/* webbsidans uppdelningen och positionera på mitten */
 main section {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -63,6 +69,8 @@ button {
     transform: rotateZ(0);
   }
 }
+
+/* design till save button */
 button {
   grid-column: 3;
   grid-row: 1;
@@ -76,14 +84,19 @@ button {
   font-size: 1em;
   transform-origin: 50% 5em;
 }
+
+/* man ändra postionen till den i x-led */
 h1::before {  
   transform: scaleX(0);
   transform-origin: bottom right;
 }
+/* man ändra postionen till den i x-led för att den har hover */
 h1:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+/* man har använd content att kunna design till man har gjort vissas sig */ 
 h1::before {
   content: " ";
   position: absolute;
@@ -92,6 +105,8 @@ h1::before {
   z-index: -1;
   transition: transform .3s ease;
 }
+
+/* design till "Hover Me" plus rörelse, man har använd  relative att kunna ger en place content  */
 h1 {
   grid-column: 2;
   grid-row: 2;  
@@ -105,7 +120,7 @@ h1 {
   font-family: system-ui, sans-serif;
   color:var(--color-text);
 }
-
+            
 .text1{
   grid-column: 4;
   grid-row: 2;
@@ -139,6 +154,8 @@ h1 {
     box-shadow: none;
   }
 }
+
+/* designen och positionen till moonen, sen får en linear-gradient som luttar 30deg */ 
 .moon {
   grid-column: 1;
   grid-row: 3;  
@@ -148,6 +165,8 @@ h1 {
   height: 148px;
   border-radius: 50%;
 }
+
+/* man har contet för att kunna vissa coden + man har animation på 3.2 secunde att vissar en sol eclips */
 .moon::before {
   content: "";
   background-color: #c7938b;
@@ -160,6 +179,7 @@ h1 {
   animation: 3.2s cresent linear infinite alternate;
 }
 
+/* det gör webbsida responsiv genom att ändrar postionerna på saker att kunna webläsare hanterar */
 @media screen and (max-width: 1320px) {
   main section   {
     grid-template-columns: repeat(5, 1ex);
@@ -179,7 +199,7 @@ h1 {
       grid-row: 1;
     }
 }
-
+/* det gör webbsida responsiv genom att ändrar postionerna på saker att kunna webläsare hanterar på en mobil */
 @media screen and (max-width: 750px) {
   main section   {
     grid-template-columns: repeat(1, 1fr);
