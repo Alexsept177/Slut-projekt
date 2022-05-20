@@ -77,3 +77,24 @@ body {
 .box input[type = "submit"]:hover {
     background: #2ecc71;
 }
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+tr:hover {background-color: coral;}
+
+label {
+    display: none;
+}
+
+iframe {
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 25em; 
+    height: 25em;
+
+}
