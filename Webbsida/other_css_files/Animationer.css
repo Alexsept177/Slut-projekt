@@ -156,8 +156,6 @@ h1::before {
     animation: 3.2s cresent linear infinite alternate;
   }
   
-
-
   .element {
     grid-column: 2;
     grid-row: 2;
@@ -227,6 +225,34 @@ textarea {
 }
 
 @media screen and (max-width: 1320px) {
+  body section {
+    grid-template-columns: repeat(1, 1fr);
+}
+  main section {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(2, .5fr);
+    grid-gap: 2em;
+    justify-items: center;
+  }
+  figure:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  figure:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .uppdelning {
+    grid-row: 2;
+    width: 100%;
+  }
+  .subject {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
   main section {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -238,5 +264,27 @@ textarea {
   }
   .uppdelning{
     grid-row: 2;
+    width: 100%;
+  }
+  body section .animationer {
+    grid-column: 1;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2em;
+  }
+  figure:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  figure:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  figure:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .subject {
+    max-width: 100%;
   }
 }
