@@ -1,41 +1,46 @@
 :root{
     --color-hader-text: #C5EFCB;
 }
+
+/* header har en rorelse på 0.5s */ 
 header {
   transition: 0.5s;
+  } 
 
-  }   
+/* header ul storlek och justering */
 ul {
   text-align: center;
   font-size: 3rem; 
   margin: 0;  
   padding: 0;
 }
+/* li har display inline-block att kunna ha de i en rad */
   ul li {
   display: inline-block;
   margin-right: 2em;
 }
+ /* cursor pointer att kunna ligga crosen över li tagen  */ 
   li {
     color: var(--color-hader-text);
     font-size: 1em;
     cursor:pointer; 
   }
 
-/* The side navigation menu */
+/* Sidornavigeringsmenyn */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%; /* 100 % full höjd  */
+  width: 0; /* 0 bredd - ändra detta med JavaScript */
+  position: fixed; /* Stanna i samma positon  */
+  z-index: 1; /* att spanna på topen */
+  top: 0; /* Håll sig på toppen  */
   left: 0;
-  background-color: var(--sidenav-text-color); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: var(--sidenav-text-color); /* Black */
+  overflow-x: hidden; /* Inaktivera horisontell rullning  */
+  padding-top: 60px; /* Placera innehåll 60px från toppen  */
+  transition: 0.5s; /* 0,5 sekunders övergångseffekt för att glida i sidanav */
 }
 
-/* The navigation menu links */
+/* Navigeringsmenyn länkar */
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -45,12 +50,12 @@ ul {
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
+/* När du för musen över navigeringslänkarna, ändra deras färg */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
+/* Placera och utforma stängningsknappen (översta högra hörnet) */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -59,7 +64,7 @@ ul {
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* Style sidinnehåll - använd detta om du vill skjuta sidinnehållet åt höger när du öppnar sidnavigeringen */
 #main {
   grid-column: 1;
   grid-row: 1;
@@ -75,12 +80,13 @@ ul {
   color: var(--color-hader-text);
 }
   
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+/* På mindre skärmar, där höjden är mindre än 450px, ändra stilen på sidanav (mindre utfyllnad och en mindre teckenstorlek) */
+ @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
 
+/* det gör webbsida responsiv genom att ändrar postionerna på saker att kunna webläsare hanterar på en mobil */
 @media screen and (max-width: 880px) {
   ul {
     display: flex;

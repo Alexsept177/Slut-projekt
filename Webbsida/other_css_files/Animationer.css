@@ -16,12 +16,13 @@ body {
     transition: background-color .5s;
 }
 
+/* webbsidans uppdelningen */
 body section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
 }
 
+/* animationers tag uppdelning */
 body section .animationer { 
   grid-column: 1;
     display: grid;
@@ -30,15 +31,17 @@ body section .animationer {
     grid-gap: 2em;
     justify-items: center;
 }
-
+/* man ändra postionen till den i x-led */
 h1::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
   }
+  /* man ändra postionen till den i x-led för att den har hover */
   h1:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+  /* man har använd content att kunna design till man har gjort vissas sig */ 
   h1::before {
     content: " ";
     position: absolute;
@@ -52,13 +55,13 @@ h1::before {
     grid-column: 1;
     grid-row: 1;
   }
-
+  /* animatio plus title font text och storlek */
   figcaption {
     color: var(--color-text);
     font-size: 2em;
     text-align: center;
   }
-
+/* design till "Hover Me" plus rörelse, man har använd  relative att kunna ger en place content  */
   h1 {
     position: relative;
     font-size: 3rem;  
@@ -69,7 +72,7 @@ h1::before {
     font-family: system-ui, sans-serif;
     color:var(--color-text);
   }
-
+  /* Animation property */
   button {
     animation: wiggle 2s linear infinite;
   }
@@ -98,11 +101,12 @@ h1::before {
       transform: rotateZ(0);
     }
   }
-
+/* fugre andra barn */
   figure:nth-child(2) {
     grid-column: 2;
     grid-row: 1;
   }
+  /* design till save button */
   button {
     height: 4em;
     width: 7em;
@@ -115,6 +119,7 @@ h1::before {
     transform-origin: 50% 5em;
   }
 
+  /* keyframes */
   @keyframes cresent {
     0% {
       transform: translate(-30px, 30px) scale(0.9);
@@ -130,12 +135,13 @@ h1::before {
       box-shadow: none;
     }
   }
-
+/* fugre trjede barn */
   figure:nth-child(3) {
     grid-column: 1;
     grid-row: 2;
   }
 
+  /* designen och positionen till moonen, sen får en linear-gradient som luttar 30deg */ 
   .moon {
     background-image: linear-gradient(30deg, #13223f, #0e1a30);
     width: 148px;
@@ -143,7 +149,7 @@ h1::before {
     border-radius: 50%;
     position: relative;
   }
-
+/* man har contet för att kunna vissa coden + man har animation på 3.2 secunde att vissar en sol eclips */
   .moon::before {
     content: ""; 
     background-color: #c7938b;
@@ -156,6 +162,7 @@ h1::before {
     animation: 3.2s cresent linear infinite alternate;
   }
   
+/* animation design, den strehar sig med alternate direction och state är på running */
   .element {
     grid-column: 2;
     grid-row: 2;
@@ -171,6 +178,7 @@ h1::before {
     animation-play-state: running;
   }
   
+  /*  keyframes */
   @keyframes stretch {
     0% {
       transform: scale(.3);
@@ -186,17 +194,19 @@ h1::before {
     }
   }
 
-
+/* storel till span*/
 section pre code span {
   font-size: 100%;
 }
 
+/* uppdelning */
 .uppdelning {
   display: grid;
   grid-template-columns: .1fr  .5fr;
   justify-content: center;
 }
 
+/* navigation uppdelning */ 
 .nav {
   display: grid;
   grid-template-rows: repeat(4, .5fr);
@@ -204,26 +214,28 @@ section pre code span {
   font-size: 2em;
 }
 
-
+/*  display none for att inte text ska vissar sig*/
 .del {
 display: none;
 color: var(--color-text);
 }
-
+/* display block för att koden ska vissar sig */
 .show-code{
   display: block;
 }
-
+/* storleken */
 .subject {
   width: 100%;
   height: 280px;
 }
  
+/* color till textarea tagen*/
 textarea {
   background-color: var(--background-color);
   color: var(--color-text)
 }
 
+/* responsivitet uppdelningen och storleken ändrar sig på 1320px */
 @media screen and (max-width: 1320px) {
   body section {
     grid-template-columns: repeat(1, 1fr);
@@ -252,6 +264,7 @@ textarea {
     width: 100%;
   }
 }
+/* responsivitet uppdelningen och storleken ändrar sig på 750px  för mobil mobilversion*/
 @media screen and (max-width: 750px) {
   main section {
     display: grid;

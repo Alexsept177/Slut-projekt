@@ -4,7 +4,7 @@
     --sidenav-text-color: hsl(163, 11%, 12%);
     --color-haver-animation: rgb(125, 152, 161);
 }
-
+/* footer uppdelning med hjälp av grid display */
 footer {
     display: grid;
     justify-items: center;
@@ -13,11 +13,11 @@ footer {
     margin: 0;
     padding: 0;
 }
-
+/* image grid column 1*/
 img {
     grid-column: 1;
 }
-
+/* span position och position relatiov att kunna en block size och inline size*/
 #tag {
     grid-column: 2;   
     position: relative;
@@ -29,17 +29,17 @@ img {
     font-family: system-ui, sans-serif;
     color:var(--color-text);
 }
-
+/* man ändra postionen till den i x-led */
 #tag::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
   }
-
+/* man ändra postionen till den i x-led för att den har hover */
 #tag:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
+/* man har använd content att kunna design till man har gjort vissas sig */
 #tag::before {
     content: " ";
     position: absolute;
@@ -48,17 +48,17 @@ img {
     z-index: -1;
     transition: transform .3s ease;
   }
-
+/* a taget positon storlekm och decorationer på transparent osynliga */
 a { 
     grid-column: 3;
     font-size: 3rem;
     color: var(--color-text); 
     text-decoration: transparent;
-    }   
-
-    @media screen and (max-width: 880px) {
-      footer {
-        display: flex;
-        flex-direction: column;
-      }
     }
+/* det gör webbsida responsiv genom att ändrar postionerna på saker att kunna webläsare hanterar på en mobil */
+@media screen and (max-width: 880px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}

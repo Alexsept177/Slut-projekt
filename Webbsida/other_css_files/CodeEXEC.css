@@ -16,6 +16,7 @@ body {
     transition: background-color .5s;
 }
 
+/* webbsida uppdelningen */
 section {
     display: grid;
     grid-template-columns: repeat(6 , 1fr);
@@ -24,6 +25,7 @@ section {
     justify-items: center;
 }
 
+/* design till "Hover Me" plus rörelse, man har använd  relative att kunna ger en place content  */
 h1 {
     grid-column: 1;
     grid-row: 3;
@@ -36,14 +38,20 @@ h1 {
     font-family: system-ui, sans-serif;
     color:var(--color-text);
   }
+
+/* man ändra postionen till den i x-led */
 h1::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
   }
+
+/* man ändra postionen till den i x-led för att den har hover */
   h1:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+/* man har använd content att kunna design till man har gjort vissas sig */ 
   h1::before {
     content: " ";
     position: absolute;
@@ -52,7 +60,7 @@ h1::before {
     z-index: -1;
     transition: transform .3s ease;
   }
-
+/* den har en animation som som wiggle 2s för alltid */
   button {
     animation: wiggle 2s linear infinite;
   }
@@ -81,6 +89,7 @@ h1::before {
     }
   }
 
+/* design till save button */
   button {
     grid-column: 2;
     grid-row: 2;
@@ -94,7 +103,7 @@ h1::before {
     font-size: 1em;
     transform-origin: 50% 5em;
   }
-
+/* keyframes  */
   @keyframes cresent {
     0% {
       transform: translate(-30px, 30px) scale(0.9);
@@ -110,6 +119,8 @@ h1::before {
       box-shadow: none;
     }
   }
+
+/* designen och positionen till moonen, sen får en linear-gradient som luttar 30deg */ 
   .moon {
       grid-column: 3;
     background-image: linear-gradient(30deg, #13223f, #0e1a30);
@@ -118,7 +129,7 @@ h1::before {
     border-radius: 50%;
     position: relative;
   }
-
+/* man har contet för att kunna vissa coden + man har animation på 3.2 secunde att vissar en sol eclips */
   .moon::before {
     content: ""; 
     background-color: #c7938b;
@@ -130,18 +141,19 @@ h1::before {
     z-index: -1;
     animation: 3.2s cresent linear infinite alternate;
   }
-  
-
-
-  p:first-of-type {
-      grid-column: 4;
-      grid-row: 3;
-  }
+/* p tag postion och color */
   p {
     grid-column: 5;
     grid-row: 2;  
     color: var(--color-text);  
   }
+
+/* första typen ab p tag*/
+  p:first-of-type {
+      grid-column: 4;
+      grid-row: 3;
+  }
+/* systa p childen  */
   p:last-child {
       grid-column: 6;
       grid-row: 1;
