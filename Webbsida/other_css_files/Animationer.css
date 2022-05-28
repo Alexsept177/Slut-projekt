@@ -243,7 +243,6 @@ textarea {
   main section {
     grid-column: 1;
     display: grid;
-    grid-template-columns: 0;
     grid-template-rows: repeat(2, .5fr);
     grid-gap: 2em;
     justify-items: center;

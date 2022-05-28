@@ -22,6 +22,7 @@ main {
     justify-items: center;
     align-items: center;
 }
+  /* Animation property */
 
 button {
     animation: wiggle 2s linear infinite;
@@ -50,6 +51,7 @@ button {
       transform: rotateZ(0);
     }
 }
+  /* design till save button */
   button {
     grid-column: 1;
     height: 4em;
@@ -62,14 +64,18 @@ button {
     font-size: 1em;
     transform-origin: 50% 5em;
   }
-
+/* position och storlet  */
   #subject {
     grid-column: 2;
     width: 800px;
     height: 280px;
   }
-   
+  /* color */
   textarea {
     background-color: var(--background-color);
     color: var(--color-text)
   } 
+  /*  display: none; för att kunna inte synnas*/
+  h1 {
+    display: none;
+  }

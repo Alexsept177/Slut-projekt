@@ -182,8 +182,8 @@ h1 {
 /* det gör webbsida responsiv genom att ändrar postionerna på saker att kunna webläsare hanterar */
 @media screen and (max-width: 1320px) {
   main section   {
-    grid-template-columns: repeat(5, 1ex);
-    grid-template-rows: repeat(3, 1ex);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     margin-top: 5vw;
     margin-bottom: 5vw;
     transition: 0.5s;

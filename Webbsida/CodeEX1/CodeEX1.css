@@ -15,14 +15,14 @@ body {
     background-color: var(--background-color);
     transition: background-color .5s;
 }
-
+/* webbsidans uppdelningen */
 section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
 }
-
+/* design till "Hover Me" plus rörelse, man har använd  relative att kunna ger en place content  */
 h1 {
     grid-column: 1;
     position: relative;
@@ -34,14 +34,20 @@ h1 {
     font-family: system-ui, sans-serif;
     color:var(--color-text);
   }
+/* man ändra postionen till den i x-led */
+
 h1::before {  
     transform: scaleX(0);
     transform-origin: bottom right;
   }
+  /* man ändra postionen till den i x-led för att den har hover */
+
   h1:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+  /* man har använd content att kunna design till man har gjort vissas sig */ 
+
   h1::before {
     content: " ";
     position: absolute;
@@ -51,13 +57,14 @@ h1::before {
     transition: transform .3s ease;
   }
 
+/* position och storlet  */
 
 #subject {
     grid-column: 2;
     width: 800px;
     height: 280px;
   }
-   
+   /*  display: none; för att kunna inte synnas*/
   textarea {
     background-color: var(--background-color);
     color: var(--color-text)

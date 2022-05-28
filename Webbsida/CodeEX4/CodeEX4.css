@@ -51,15 +51,21 @@ main {
       background-color: yellow;
     }
   }
+/* position och storlet  */
 
 #subject {
     grid-column: 2;
     width: 800px;
     height: 280px;
   }
-   
+     /* color */
+
   textarea {
     background-color: var(--background-color);
     color: var(--color-text)
   }     
+  /*  display: none; för att kunna inte synnas*/
 
+  h1 {
+    display: none;
+  }
