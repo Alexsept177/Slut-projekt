@@ -1,3 +1,10 @@
+:root {
+  --color:#1C2321;
+  --color:#7D98A1;
+  --color:#5E6572;
+  --color:#A9B4C2;
+  --color:#EEF1EF;
+}
 /* Att webbsida ska ha rätt storlep beror på webbläsare man använder */
 html, body {
     width: 100%;
@@ -99,6 +106,10 @@ label {
     display: none;
 }
 
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
 /* youtube storleken, den har en position fixed för att kunna lägga den i en statik position*/
 iframe {
     position: fixed;
@@ -145,5 +156,20 @@ p {
   svg  {
       height: 100;
       width: 100;
+  }
+
+  .age2:out-of-range {
+    border: 2px solid red;
+  }
+  .age1:required {
+    background-color: yellow;
+  }
+
+  .css:in-range {
+    border: 2px solid rgb(52, 196, 188);
+  }
+
+  input:optional {
+    background-color: rgb(221, 36, 36);
   }
   

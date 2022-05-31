@@ -39,28 +39,26 @@
   </header>
     <form action="./index.html" class="box">
         <h1>Login</h1>
-        <label for="Username">Username</label>
-        <input id="checkbox" type="text" name="Username" placeholder="Username">
+        <label for="checkbox">Username</label>
+        <input id="checkbox" type="text" name="Username" placeholder="Username" required>
         <label for="password">password</label>
         <input id="password" type="password" name="password" placeholder="password">
         <input type="submit" value="Login">
     </form>    
     <table>
       <caption>Monthly savings</caption>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Points</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
         <tr>
           <td>Peter</td>
           <td>Griffin</td>
           <td>$100</td>
-        </tr>
-        <tr>
-          <td>Lois</td>
-          <td>Griffin</td>
-          <td>$150</td>
         </tr>
         <tr>
           <td>Joe</td>
@@ -137,10 +135,18 @@
             <td>Brown</td>
             <td>$6645</td>
           </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>$150</td>
+          </tr> 
+        </tfoot>
       </table>
       <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
       <audio controls>
-        <source src="Luis Fonsi, Demi Lovato - Échame La Culpa (Video Oficial).mp3" type="audio/ogg">
+        <source src="music" type="audio/ogg">
       </audio>
       <ol>
         <li>Mix flour, baking powder, sugar, and salt.</li>
@@ -149,37 +155,59 @@
         <li>Fill muffin tray 3/4 full.</li>
         <li>Bake for 20 minutes.</li>
       </ol>
-      <form action="./index.html">
+      <form action="./index.html" method="POST">
         <input type="checkbox" id="CodeBox" name="CodeBox" value="Index">
-        <label for="vehicle1"> CodeBox alright</label><br>
+        <label> CodeBox alright</label>
         <input type="checkbox" id="CodeEXEC" name="CodeEXEC" value="Animationer">
-        <label for="vehicle2">Animationer, Vem inte gillar det? </label><br>
-        <input type="checkbox" id="Animationer" name="Animationer" value="Information">
-        <label for="vehicle3"> Måste du veta allt ? </label><br><br>
+        <label>Animationer, Vem inte gillar det? </label>
+        <input type="checkbox" id="Animationer" name="Animationer" value="Information" checked>
+        <label> Måste du veta allt ? </label>
+        <input type="number" min="5" max="10" value="17">
         <input type="submit" value="Submit">
       </form>
-      <form action="./index.html">
+      <form action="./index.html" method="GET">
         <p>Please select your favorite Web language:</p>
         <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label><br>
+        <label for="html">HTML</label>
         <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label><br>
+        <label for="css">CSS</label>
         <input type="radio" id="javascript" name="fav_language" value="JavaScript">
         <label for="javascript">JavaScript</label>
-      
-        <br>  
-      
         <p>Please select your age:</p>
+        <label>0 - 30</label>
         <input type="radio" id="age1" name="age" value="30">
-        <label for="age1">0 - 30</label><br>
+        <label>31 - 60</label>
         <input type="radio" id="age2" name="age" value="60">
-        <label for="age2">31 - 60</label><br>  
+        <label>61 - 100</label>
         <input type="radio" id="age3" name="age" value="100">
-        <label for="age3">61 - 100</label><br><br>
         <input type="submit" value="Submit">
       </form>
-      <p aria-valuenow="75"
-      aria-valuemin="0" aria-valuemax="100">>There are several browsers available, such as <a href="./Animationer.html">Animationer</a>, <a href="./index.html">index</a>, and
+      <form action="./index.html" method="GET">
+        <fieldset>
+          <legend>För alltid</legend>
+          <label for="fname">First name</label>
+          <input type="text" id="fname" name="fname">
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" name="lname">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <label for="birthday">Birthday</label>
+          <input type="date" id="birthday" name="birthday">
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+      <form action="./index.html" method="GET">
+        <label for="ok">Choose my</label>
+        <select name="ok" id="ok">
+          <option value="ok" selected>alex</option>
+          <option value="nee">exakt</option>
+          <option value="hmm">bara jag</option>
+          <option value="aldrig">och jag igen</option>
+        </select >
+        <input type="submit" value="Submit">
+      </form>
+      
+      <p>There are several browsers available, such as <a href="./Animationer.html">Animationer</a>, <a href="./index.html">index</a>, and
         <a href="./CodeEXEC.html">CodeEXEC</a>.</p>
         <svg height="100" width="100">
           <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
@@ -189,6 +217,5 @@
         <span id="tag">Thank you</span>
         <a href="https://www.vaxjo.se/sidor/forskola-och-skola/gymnasieskola/teknikum.html">Visit Teknikum</a>
     </footer>
-
 </body>
 </html>
