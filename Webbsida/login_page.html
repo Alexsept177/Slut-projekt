@@ -156,29 +156,31 @@
         <li>Bake for 20 minutes.</li>
       </ol>
       <form action="./index.html" method="POST">
+        <label for="CodeBox"> CodeBox alright</label>
         <input type="checkbox" id="CodeBox" name="CodeBox" value="Index">
-        <label> CodeBox alright</label>
-        <input type="checkbox" id="CodeEXEC" name="CodeEXEC" value="Animationer">
-        <label>Animationer, Vem inte gillar det? </label>
-        <input type="checkbox" id="Animationer" name="Animationer" value="Information" checked>
-        <label> Måste du veta allt ? </label>
-        <input type="number" min="5" max="10" value="17">
+        <label for="CodeEXEC">Animationer, Vem inte gillar det? </label>
+        <input type="checkbox" id="CodeEXEC" name="CodeEXEC" value="Animationer" checked>
+        <label for="index"> Måste du veta allt ? </label>
+        <input type="checkbox" id="index" name="Animationer" value="Information">
+        <label for="ds"> yes sir</label>
+        <input id="ds" type="number" min="5" max="10" value="17">
         <input type="submit" value="Submit">
       </form>
       <form action="./index.html" method="GET">
         <p>Please select your favorite Web language:</p>
+        <label for="html"></label>
         <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label>
+        <label for="css">HTML</label>
         <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label>
+        <label for="javascript">CSS</label>
         <input type="radio" id="javascript" name="fav_language" value="JavaScript">
         <label for="javascript">JavaScript</label>
         <p>Please select your age:</p>
-        <label>0 - 30</label>
+        <label for="age1">0 - 30</label>
         <input type="radio" id="age1" name="age" value="30">
-        <label>31 - 60</label>
+        <label for="age2">31 - 60</label>
         <input type="radio" id="age2" name="age" value="60">
-        <label>61 - 100</label>
+        <label for="age3">61 - 100</label>
         <input type="radio" id="age3" name="age" value="100">
         <input type="submit" value="Submit">
       </form>
